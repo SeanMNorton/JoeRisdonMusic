@@ -1,5 +1,6 @@
 <template>
   <div>
+    <router-link class="mobile-title" to="/">{{ bandName }}</router-link>
     <Slide class="mobile" :closeOnNavigation="true">
       <router-link to="/">Home</router-link>
       <a
@@ -33,7 +34,7 @@
       >
         <h2>Press Kit</h2>
       </a>
-      <router-link class="larger" to="/">Joe Risdon</router-link>
+      <router-link class="larger" to="/">{{bandName}}</router-link>
       <div class="brandLinks--desktop">
         <BrandLink
           :key="url.siteName"
@@ -64,6 +65,7 @@ export default {
   },
   data() {
     return {
+      bandName: band.bandName,
       storeUrl: band.storeUrl,
       urls: band.brandLinks,
     };
@@ -85,6 +87,9 @@ export default {
   @include fluid-type($min-width, $max-width, 26px, 50px);
 }
 .bm-burger-button {
+  position: relative !important;
+  top: unset !important;
+  left: unset !important;
   height: 20px;
   width: 26px;
   &:hover {
@@ -120,8 +125,19 @@ export default {
   align-items: center;
 }
 
+.mobile-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4em;
+  white-space: nowrap;
+}
+
 @media (min-width: $break-point) {
   .mobile {
+    display: none;
+  }
+  .mobile-title {
     display: none;
   }
   .desktop {
