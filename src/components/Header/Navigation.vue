@@ -8,7 +8,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        Press Kit
+      Press Kit
       </a>
       <span>----------------</span>
         <BrandLink
@@ -32,7 +32,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        <h2>Press Kit</h2>
+        <h2>- Press Kit -</h2>
       </a>
       <router-link class="larger" to="/">{{bandName}}</router-link>
       <div class="brandLinks--desktop">
@@ -78,13 +78,17 @@ export default {
 .desktop {
   display: none;
   justify-content: space-between;
-  max-width: 950px;
-  margin: 0 auto;
-  padding: 0 10px;
-  margin-top: 20px;
+  position: relative;
+  width: 100%;
+  padding: 10px 20px;
   align-items: baseline;
+  box-sizing: border-box;
   gap: 10px;
   @include fluid-type($min-width, $max-width, 26px, 50px);
+}
+.mobile{
+  margin-top: 6px;
+  margin-bottom: 15px;
 }
 .bm-burger-button {
   position: relative !important;
@@ -116,18 +120,22 @@ export default {
   font-size: 1em;
   .larger {
     font-size: 4em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .desktop .brandLinks--desktop {
   font-size: 0.66em;
   display: flex;
-  gap: 15px;
+  gap: 10px;
   align-items: center;
 }
 
 .mobile-title {
   position: absolute;
   left: 50%;
+  margin-top: 10px;
   transform: translateX(-50%);
   font-size: 1.4em;
   white-space: nowrap;
@@ -144,11 +152,7 @@ export default {
     display: flex;
   }
 }
-@media (min-width: $menu-break-point) {
-  // .bm-burger-button {
-  //   position: fixed;
-  // }
-}
+
 .brandLinks--mobile {
   display: grid;
   grid-template-columns: repeat(1, auto);
