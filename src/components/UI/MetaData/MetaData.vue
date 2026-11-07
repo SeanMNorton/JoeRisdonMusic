@@ -12,7 +12,7 @@ const props = defineProps({
 const imageUrl = () => `https://media.graphcms.com/compress/${props.data.image?.handle}`;
 
 useHead(() => ({
-  title: 'The Buffalo Ryders',
+  title: 'Joe Risdon',
   meta: [
     { property: 'og:title', content: props.data.title },
     { property: 'og:description', content: props.data.description },

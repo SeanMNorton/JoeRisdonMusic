@@ -1,11 +1,18 @@
 <template>
   <div class="footer">
     <div class="container">
-      <router-link to="/"><h2>- {{ bandName }} -</h2></router-link>
+      <!-- <router-link to="/"><h2>- {{ bandName }} -</h2></router-link> -->
       <div>
-        <a class='press-kit-link' v-if="download" target="_blank" rel="noopener noreferrer" :href="download.file.url">
+        <!-- <a class='press-kit-link' v-if="download" target="_blank" rel="noopener noreferrer" :href="download.file.url">
           <h2>- press kit -</h2>
-        </a>
+        </a> -->
+          <a class="press-kit-link"
+        href="/JoeRisdonEPK.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        - Press Kit -
+      </a>
         <h3>{{ bookingEmail }}</h3>
       </div>
       <div class="brands">
@@ -23,13 +30,13 @@
 <script setup>
 import { computed } from 'vue';
 import { useQuery } from '@vue/apollo-composable';
-import { GET_PRESS_KIT, GET_URLS } from '../../queries';
+import { GET_PRESS_KIT } from '../../queries';
 import BrandLink from '../UI/BrandLink/BrandLink.vue';
 import band from '@/config/band';
 
-const { result: urlsResult } = useQuery(GET_URLS);
+// const { result: urlsResult } = useQuery(GET_URLS);
 const { result: downloadResult } = useQuery(GET_PRESS_KIT);
-const urls = computed(() => urlsResult.value?.urls);
+const urls = computed(() => band.brandLinks);
 const download = computed(() => downloadResult.value?.download);
 const bandName = band.bandName;
 const bookingEmail = band.bookingEmail;

@@ -23,9 +23,19 @@ export default {
   // SongKick artist ID — found in your SongKick artist page URL:
   // e.g. https://www.songkick.com/artists/1234567 → '1234567'
   // Set to null to hide the SongKick widget
-  songkickArtistId: null,
+  songkickArtistId: '9094184',
 
   // Google Analytics measurement ID (UA-XXXXXXXX-X or G-XXXXXXXXXX)
   // Set to null to disable analytics
   googleAnalyticsId: null,
+
+  // band urls (brandLinks)
+  brandLinks: [
+    {siteName: 'bandcamp', url: 'https://joerisdon.bandcamp.com/', linkText: 'bandcamp'},
+    {siteName: 'itunes', url: 'https://music.apple.com/us/artist/joe-risdon/1172456873', linkText: 'apple'},
+    {siteName: 'spotify', url: 'https://open.spotify.com/artist/2YL6zJ2n9NXB6q4ddR0lEo', linkText: 'spotify'},
+    {siteName: 'instagram', url: 'https://instagram.com/joerisdonmusic', linkText: 'instagram'},
+    {siteName: 'facebook', url: 'https://facebook.com/joerisdonmusic', linkText: 'facebook'},
+    {siteName: 'youtube', url: 'https://youtube.com/@joerisdonmusic', linkText: 'youtube'},
+  ]
 };

@@ -140,10 +140,11 @@ onBeforeUnmount(() => document.removeEventListener('keydown', onKeydown));
 }
 
 :where(.bm-item-list) {
-  padding: 2.5em;
-  a {
+  padding: 1em 0;
+  font-size: large;
+  >* {
     display: block;
-    padding: 0.8em;
+    padding: 0.3em;
     text-decoration: none;
   }
 }

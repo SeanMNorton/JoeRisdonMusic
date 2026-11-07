@@ -9,7 +9,7 @@
       data-track-button="on"
       data-detect-style="on"
       data-background-color="#000000"
-      data-font-color="#ffffff"
+      data-font-color="#FEDE02"
       data-locale="en"
       data-other-artists="on"
       data-share-button="on"

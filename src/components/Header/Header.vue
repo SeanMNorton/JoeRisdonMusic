@@ -1,19 +1,16 @@
 <template>
   <div class="header">
     <NavigationComponent />
-    <LogoComponent />
   </div>
 </template>
 
 <script>
 import NavigationComponent from '@/components/Header/Navigation.vue';
-import LogoComponent from '@/components/Header/Logo.vue';
 
 export default {
   name: 'HeaderComponent',
   components: {
     NavigationComponent,
-    LogoComponent,
   },
 };
 </script>
