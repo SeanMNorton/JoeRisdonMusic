@@ -1,0 +1,51 @@
+@use 'sass:color';
+@use 'sass:math';
+
+$primary-font: 'Suez One', Helvetica, monospace, sans-serif;
+$secondary-font: sans-serif;
+
+$break-point: 850px;
+$menu-break-point: 1111px;
+
+$color-background: black;
+$color-background-lighter: color.adjust($color-background, $lightness: 10%);
+$color-white: #fff;
+$color-primary: #fff;
+$color-secondary: #e4e4e4;
+$color-danger: #e4e4e4;
+
+$border-radius: 0.3em;
+
+// Widths/Sizes for Fluid-Type //
+$min-width: 300px;
+$max-width: 850px;
+$max-header-font: 70px;
+$min-header-font: 20px;
+$max-sub-header-font: 24px;
+$min-sub-header-font: 15px;
+
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+  @return $number;
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: math.unit($min-vw);
+  $u2: math.unit($max-vw);
+  $u3: math.unit($min-font-size);
+  $u4: math.unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}

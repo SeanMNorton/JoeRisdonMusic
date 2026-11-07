@@ -1,0 +1,63 @@
+<template>
+  <div>
+    <div id="app">
+      <HeaderComponent />
+      <router-view />
+      <div class="push" />
+    </div>
+    <FooterComponent />
+  </div>
+</template>
+
+<script>
+import HeaderComponent from '@/components/Header/Header.vue';
+import FooterComponent from '@/components/Footer/Footer.vue';
+
+export default {
+  name: 'App',
+  components: {
+    HeaderComponent,
+    FooterComponent,
+  },
+};
+</script>
+
+<style lang="scss">
+  @use './assets/fonts.scss';
+  @use './assets/variables.scss' as *;
+  #app {
+    letter-spacing: 1.5px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    margin: 0 auto -50px;
+  }
+  html {
+    font-family: $primary-font;
+    text-transform: uppercase;
+    background-color: $color-background;
+    color: $color-primary;
+    a {
+      color: $color-primary;
+      text-decoration: none;
+      &:hover{
+        color: $color-secondary
+      }
+    }
+  }
+  .push {
+    height: 60px;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  .no-scroll {
+    overflow: hidden;
+  }
+</style>

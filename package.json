@@ -1,0 +1,37 @@
+{
+  "name": "joerisdon-vue",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "serve": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@apollo/client": "^3.14.1",
+    "@fortawesome/fontawesome-svg-core": "^7.0.0",
+    "@fortawesome/free-brands-svg-icons": "^7.0.0",
+    "@fortawesome/vue-fontawesome": "^3.0.0",
+    "@unhead/vue": "^3.0.0",
+    "@vue/apollo-composable": "^4.2.2",
+    "graphql": "^16.0.0",
+    "graphql-tag": "^2.12.6",
+    "vue": "^3.5.0",
+    "vue-router": "^4.6.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "eslint": "^9.39.5",
+    "eslint-plugin-vue": "^10.12.0",
+    "globals": "^17.14.0",
+    "sass": "^1.108.1",
+    "vite": "^8.3.6",
+    "vite-plugin-pwa": "^2.0.0",
+    "vue-eslint-parser": "^10.4.2",
+    "workbox-build": "^7.4.1",
+    "workbox-window": "^7.4.1"
+  }
+}
