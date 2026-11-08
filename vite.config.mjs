@@ -24,7 +24,9 @@ export default defineConfig({
       },
       workbox: {
         // Single page app: serve index.html for navigations, but never cache API calls.
+        // Exclude URLs with file extensions (PDFs, images, etc.) so they hit the network.
         navigateFallback: '/index.html',
+        navigateFallbackDenylist: [/\.[^/]+$/],
       },
     }),
   ],
