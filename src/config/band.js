@@ -10,6 +10,7 @@ export default {
   // Hygraph document ID for the press kit download
   // Find it in Hygraph > Downloads > open the press kit entry and copy the ID from the URL
   pressKitId: 'REPLACE_WITH_PRESS_KIT_ID',
+  pressKit: '/press-kit.html',
 
   // Band name displayed in the footer and browser tab
   bandName: 'Joe Risdon',

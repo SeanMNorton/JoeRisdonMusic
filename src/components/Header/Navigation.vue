@@ -4,7 +4,7 @@
     <Slide class="mobile" :closeOnNavigation="true">
       <router-link to="/">Home</router-link>
       <a
-        href="/press-kit.pdf"
+        :href="pressKit"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -28,7 +28,7 @@
 
     <div class="desktop">
       <a
-        href="/press-kit.pdf"
+       :href="pressKit"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -68,6 +68,7 @@ export default {
       bandName: band.bandName,
       storeUrl: band.storeUrl,
       urls: band.brandLinks,
+      pressKit: band.pressKit,
     };
   },
 };

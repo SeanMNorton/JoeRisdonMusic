@@ -6,7 +6,7 @@
         <!-- <a class='press-kit-link' v-if="download" target="_blank" rel="noopener noreferrer" :href="download.file.url">
           <h2>- press kit -</h2>
         </a> -->
-        <a class="press-kit-link" href="/press-kit.pdf" target="_blank" rel="noopener noreferrer">
+        <a class="press-kit-link" :href="pressKit" target="_blank" rel="noopener noreferrer">
           - Press Kit -
         </a>
         <h3>{{ bookingEmail }}</h3>
@@ -20,16 +20,17 @@
 
 <script setup>
 import { computed } from "vue";
-import { useQuery } from "@vue/apollo-composable";
-import { GET_PRESS_KIT } from "../../queries";
+// import { useQuery } from "@vue/apollo-composable";
+// import { GET_PRESS_KIT } from "../../queries";
 import BrandLink from "../UI/BrandLink/BrandLink.vue";
 import band from "@/config/band";
 
 // const { result: urlsResult } = useQuery(GET_URLS);
-const { result: downloadResult } = useQuery(GET_PRESS_KIT);
+// const { result: downloadResult } = useQuery(GET_PRESS_KIT);
 const urls = computed(() => band.brandLinks);
-const download = computed(() => downloadResult.value?.download);
-const bandName = band.bandName;
+// const download = computed(() => downloadResult.value?.download);
+// const bandName = band.bandName;
+const pressKit = band.pressKit;
 const bookingEmail = band.bookingEmail;
 </script>
 
