@@ -34,6 +34,7 @@ export default {
     margin-top: 0;
   }
   .container {
+    margin-top: 200px;
     height: 20vh;
     display: flex;
     flex-direction: column;
