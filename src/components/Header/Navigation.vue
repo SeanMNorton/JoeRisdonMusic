@@ -4,7 +4,7 @@
     <Slide class="mobile" :closeOnNavigation="true">
       <router-link to="/">Home</router-link>
       <a
-        href="/JoeRisdonEPK.pdf"
+        href="/press-kit.pdf"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -28,7 +28,7 @@
 
     <div class="desktop">
       <a
-        href="/JoeRisdonEPK.pdf"
+        href="/press-kit.pdf"
         target="_blank"
         rel="noopener noreferrer"
       >
