@@ -1,6 +1,6 @@
-<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/73b2495a-529b-49aa-abbf-6a7db3757e3e/deploy-status)](https://app.netlify.com/sites/thebuffaloryders/deploys) -->
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5508e552-7f84-4734-89d4-cc8159f8878a/deploy-status)](https://app.netlify.com/projects/joerisdonmusic/deploys)
 
-<!-- [Currently Deployed Here](https://thebuffaloryders.netlify.com/#/) -->
+[Currently Deployed Here](https://joerisdonmusic.netlify.com/#/)
 
 # joerisdon-vue
 This is a band website for Joe Risdon.
