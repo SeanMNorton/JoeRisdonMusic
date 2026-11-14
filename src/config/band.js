@@ -38,5 +38,27 @@ export default {
     {siteName: 'instagram', url: 'https://instagram.com/joerisdonmusic', linkText: 'instagram'},
     {siteName: 'facebook', url: 'https://facebook.com/joerisdonmusic', linkText: 'facebook'},
     {siteName: 'youtube', url: 'https://youtube.com/@joerisdonmusic', linkText: 'youtube'},
+  ],
+
+  showcase: {
+    title: 'Gage House Sessions',
+    videos: [
+      {
+        description: '"Fatherless"',
+        url: 'https://www.youtube-nocookie.com/embed/FUHLgyQmvOY?si=WH6m8EFUKvIyykNN',
+        priority: 1,
+      },
+      {
+        description: '"Come Down"',
+        url: 'https://www.youtube-nocookie.com/embed/DfFdRXZ1dwk?si=7YUocCmUDne9-XZh',
+        priority: 2,
+      },
+      {
+        description: '"Talk of Redemption"',
+        url: 'https://www.youtube-nocookie.com/embed/d8jsZAN5V-E?si=hYfPBB9IpAJ4Arn5',
+        priority: 3,
+      }
   ]
+  
+  },
 };

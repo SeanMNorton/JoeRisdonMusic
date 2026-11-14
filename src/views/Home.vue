@@ -2,7 +2,7 @@
   <div class="home">
     <MetaData v-if="metaDatas" :data="metaDatas[0]" />
     <Banner />
-    <!-- <ShowcaseComponent /> -->
+    <ShowcaseComponent />
     <SongKick />
 
     <!-- OLD GIGS LIST -->
@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-// import ShowcaseComponent from '@/components/Showcase/Showcase.vue';
+import ShowcaseComponent from '@/components/Showcase/Showcase.vue';
 // import GigList from '@/components/Tour/GigList.vue';
 import Banner from '@/components/Banner/Banner.vue';
 import SongKick from '@/components/Tour/SongKick.vue';
