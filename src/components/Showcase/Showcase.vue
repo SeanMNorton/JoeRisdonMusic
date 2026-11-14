@@ -40,10 +40,12 @@ const selectedVideo = computed(() =>
 );
 
 const previousVideo = () => {
+  if(selectedPriority.value === 1) return selectedPriority.value = showcase.videos.length;
   if (selectedPriority.value > 1) selectedPriority.value--;
 };
 
 const nextVideo = () => {
+  if (selectedPriority.value === showcase.videos.length) return  selectedPriority.value = 1;
   if (selectedPriority.value < showcase.videos.length) selectedPriority.value++;
 };
 </script>
